@@ -17,7 +17,7 @@ for i=2:1:n
         H1d = a(i+1)*(2*H0+2*x*H0d-2*(i-1)*H1d);
         H1 = a(i+1)*(2*x*H0-2*(i-1)*H1);
         out = out + H1;
-        outd = out +H1d;
+        outd = outd +H1d;
     end
 end
 
