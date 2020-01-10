@@ -10,7 +10,7 @@ function [k,x] = newton(a,b,x0,ak,n)
 %       x - reached root approximation
 %Test: [k,x] = newton(-5, -1.4, -5, ones(5), 4)
 
-if (x0<a || x0>b)
+if (real(x0)<a || real(x0)>b)
     error("Start point outside given interval");
 end
 
