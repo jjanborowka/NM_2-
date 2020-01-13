@@ -24,7 +24,7 @@ while kontrol~=finish
             n = input('Podaj krotność wielomianu n:');
                         
         case 6
-            %Check if newton method assumptions are met
+            %Check if polynomial is correct
             if length(ak)-n ~= 1
                 disp("Błąd w długości wektora ak i rozmiarze wielomianu n")
                 break
@@ -36,11 +36,7 @@ while kontrol~=finish
             
             [fa, fad] = hermit(a, ak, n);
             [fb, fbd] = hermit(b, ak, n);
-            if fa*fb>0
-                disp("Na przedziale [a, b] wielomian nie spełnia założeń metody Newtona o znaku na krańcach przedziału");
-                break
-            end
-            
+                        
             x = linspace(a, b, nm(1));
             y = linspace(c, d, nm(2));
             
