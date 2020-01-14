@@ -14,10 +14,12 @@ x = x0;
 k = 1;
 
 [w, wd] = hermit(x, ak, n);
-
-while (abs(w) > 1e-10)
+d = 0 ;
+while (abs(w) > 1e-10 && d < 10000)
     x = x - (w/wd);
     [w, wd] = hermit(x, ak, n);
     k = k+1;
+    d = d+1;
+    
 end
 end
