@@ -10,25 +10,16 @@ function [k,x] = newton(a,b,x0,ak,n)
 %       x - reached root approximation
 %Test: [k,x] = newton(-5, -1.4, -5, ones(5), 4)
 
-tol = 1e-6;
-iteracje = 100;
 x = x0;
 k = 1;
 
 [w, wd] = hermit(x, ak, n);
 d = 0 ;
-while (abs(w) > tol && d < iteracje)
-    %Sprawdzić dzielenie przez 0!
-    if wd==0
-        disp("Dzielenie przez 0");
-        return
-    end
+while (abs(w) > 1e-10 && d < 10000)
     x = x - (w/wd);
     [w, wd] = hermit(x, ak, n);
     k = k+1;
     d = d+1;
     
 end
-[w, ~] = hermit(x, ak, n);
-wartosc = w;
 end

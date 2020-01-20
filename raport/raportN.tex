@@ -30,12 +30,15 @@ Grupa laboratoryjna: wtorki, godzina 10:15
 \section{Temat projektu}
 
 \subsection{Treść zadania}
+
+\textbf{Wizualizacja szybkości zbieżności dla metody Newtona
+(w dziedzinie zespolonej) zastosowanej do znalezienia zera wielomianu:}\newline
 \begin{center}
-\textbf{Wizualizacja szybkości zbieżności dla metody Newtona (w dziedzinie zespolonej) zastosowanej do znalezienia zera wielomianu:}\newline
 
 $w_{n}(x)={\sum}_{k=0}^{n}a_{k}H_{k}(x)$
 
 \end{center}
+
 Nie należy sprowadzać wielomianu $w_{n}$ do postaci naturalnej! Do obliczania wartości wielomianu $w_{n}$ oraz jego pochodnej należy wykorzystać związek rekurencyjny spełniany przez wielomiany Hermite'a.
 
 \subsection{Związek rekurencyjny wielomianów Hermite'a}
@@ -45,8 +48,21 @@ $H_{1}=2x$\newline
 $H_{n+1}(x)=2xH_{n}(x)-2nH_{n-1}(x)$
 
 \subsection{Metoda Newtona}
-Załóżmy, że $x_{0} \in\mathbb{C}$
+Załóżmy, że $x_{0} \in\mathbb{C}$.
 Kolejne przybliżenia są dane rekurencyjnym wzorem:
+\newline
+\newline
+$x_{k+1}=x_{k}-\frac{f(x_{k})}{f'(x_{k})}$
+\newline
+\newline
+Warunek stopu:
+\newline
+$|f(x_{k})| \leqslant \epsilon$
+\newline
+$\epsilon = 1 \cdot 10^{-10}$
+
+\subsection{Sposób wizualizacji}
+Na zadanym w menu obszarze $[a, b]$x$[c, d]$ tworzona jest siatka punktów zespolonych $(x, y)$ o współrzędnych $x \in [a, b]$ oraz $y \in [ic, id]$. Liczbę generowanych punktów ustalamy osobno dla obu przedziałów. Dla każdego z punktów stosujemy metodę Newtona, a liczbę iteracji zapisujemy w - odpowiadającej siatce punktów - macierzy. Tak otrzymaną macierz wizualizujemy za pomocą polecenia imagesc.
 
 \newpage
 \section{Przykłady}
@@ -60,7 +76,7 @@ Wizualizacja poszukiwania zer wielomianu:\newline
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.6]{map1.png}
+\includegraphics[keepaspectratio=true,scale=0.8]{map2.png}
 \end{center}\end{figure}
 \newpage
 
@@ -73,7 +89,7 @@ Wizualizacja poszukiwania zer wielomianu:\newline
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.6]{map3.png}\newline
+\includegraphics[keepaspectratio=true,scale=0.8]{map3.png}\newline
 \end{center}\end{figure}
 \newpage
 
@@ -86,7 +102,7 @@ Wizualizacja poszukiwania zer wielomianu:\newline
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.6]{map4.png}\newline
+\includegraphics[keepaspectratio=true,scale=0.8]{map4.png}\newline
 \end{center}\end{figure}
 \newpage
 
@@ -96,7 +112,7 @@ Wizualizacja poszukiwania zer wielomianu:\newline
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.6]{menu.png}
+\includegraphics[keepaspectratio=true,scale=0.6]{menu1.png}
 
 \end{center}\end{figure}
 \newpage

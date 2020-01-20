@@ -1,11 +1,12 @@
 clear
 clc
-finish=10;
+
+finish=9;
 kontrol=1;
 
 while kontrol~=finish
     
-    kontrol=menu('Wizualizacji zbieżności', 'Podaj przedział [a,b]', 'Podaj przedział [c,d]', 'Podaj liczby punktów [n,m]', 'Podaj wektor współczynników ak', 'Podaj krotność n wielomianu Wn(x)', 'Wizualizuj zbieżność','Fraktal 1','Liczby pierwsze','Fraktal 2','FINISH');
+    kontrol=menu('Wizualizacji zbieżności', 'Podaj przedział [a,b]', 'Podaj przedział [c,d]', 'Podaj liczby punktów [n,m]', 'Podaj wektor współczynników ak', 'Podaj krotność n wielomianu Wn(x)', 'Wizualizuj zbieżność','Przykład Koala [-3,-1.5]x[-3,3]; ak=ones(5); n=4; nm=10x10','Liczby pierwsze','FINISH');
     
     switch kontrol
         case 1
@@ -52,25 +53,19 @@ while kontrol~=finish
             
             imagesc(A)
         case 7
-            ab = [ -10,10];
+            ab = [ -3,-1.5];
             cd = [-3,3];
-            nm = [100,100];
-            ak = [pi, 2.71, sqrt(10), sqrt(3), 3];
+            nm = [10,10];
+            ak = ones(5);
             n = 4;
         case 8     
             
             ab = [2;7];
             cd = [3;11];
-            nm = [100;100];
-            ak = [zeros(1,5),1];
+            nm = [1000;1000];
+            ak = 1:6;
             n = 5;
         case 9
-            ab = [ -3,-1.5];
-            cd = [-3,3];
-            nm = [100,100];
-            ak = ones(5);
-            n = 4;
-        case 10
             break
     end
 end
